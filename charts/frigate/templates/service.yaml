@@ -75,6 +75,10 @@ spec:
       port: 8555
       protocol: UDP
       targetPort: webrtc-udp
+    - name: go2rtc-admin
+      port: 1984
+      protocol: TCP
+      targetPort: webrtc-tcp
   selector:
     app.kubernetes.io/name: {{ include "frigate.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
